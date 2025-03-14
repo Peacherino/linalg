@@ -29,6 +29,8 @@ void Display(const Dmatrix &Amat)
 Dvector Solvex(const Dmatrix &Amat, const Dvector &bvect)
 // Solves for systems of linear equations in the form Ax=b using cramer's rule 
 {
+    Dvector result;
+    return result;
 }
 
 
@@ -36,7 +38,19 @@ double Det(const Dmatrix &Amat)
 // returns the Determinant of matrix Amat using a recursive algorithm
 // base case is 2x2 matrix 
 {
-    return (Amat[0][0])*(Amat[1][1]) - (Amat[0][1])*(Amat[1][0]);
+    double result = 0;
+    double sign = 1;
+    if (Amat.size() == 2) {
+	return (Amat[0][0])*(Amat[1][1]) - (Amat[0][1])*(Amat[1][0]);
+    }
+    for (int i=0; i<Amat.size(); i++) {
+	Dmatrix minor = Minor(Amat, i);
+	result += Det(minor)*Amat[0][i]*sign;
+	sign = sign*(-1);
+    }
+    return result;
+
+
 
 }
 

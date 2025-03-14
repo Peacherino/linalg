@@ -2,6 +2,14 @@
 #include <cppunit/extensions/HelperMacros.h>
 #include "lin-algebra.h"
 
+bool vector_equal(Dvector &a, Dvector &b) {
+    CPPUNIT_ASSERT_EQUAL(a.size(), b.size());
+    for (int i=0; i<a.size(); ++i) {
+	CPPUNIT_ASSERT_EQUAL(a[i], b[i]);
+    }
+    return 1;
+}
+
 bool matrix_equal(Dmatrix &a, Dmatrix &b) {
     CPPUNIT_ASSERT_EQUAL(a.size(), b.size());
     for (int row=0; row<a.size(); ++row) {
@@ -19,6 +27,7 @@ class LinalgTest : public CppUnit::TestFixture {
     CPPUNIT_TEST(test_minor);
     CPPUNIT_TEST(test_replace);
     CPPUNIT_TEST(test3x3_determinant);
+    CPPUNIT_TEST(test_solve);
     CPPUNIT_TEST_SUITE_END();
 
 
@@ -74,6 +83,17 @@ public:
 	double det = Det(input);
         CPPUNIT_ASSERT_EQUAL(9.0, det);
     }
+    void test_solve() {
+	Dmatrix input = {{2, 3, -1},
+	                 {-1, 2, 3},
+			 {4, -1, 1}};
+	Dvector b = {5, 0, -1};
+	Dvector out = Solvex(input, b);
+	Dvector expected = {0.25, 1.25, -0.75};
+	Display(out);
+	vector_equal(expected, out);
+    }
+	
 
 };
 
