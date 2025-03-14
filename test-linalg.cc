@@ -18,6 +18,7 @@ class LinalgTest : public CppUnit::TestFixture {
     CPPUNIT_TEST(test2x2_determinant);
     CPPUNIT_TEST(test_minor);
     CPPUNIT_TEST(test_replace);
+    CPPUNIT_TEST(test3x3_determinant);
     CPPUNIT_TEST_SUITE_END();
 
 
@@ -65,6 +66,14 @@ public:
 	matrix_equal(out, expected);
     }
 
+    void test3x3_determinant() {
+	Dmatrix input = {{7, 2, 3},
+	                 {4, 5, 6},
+			 {7, 8, 10}};
+	Display(input);
+	double det = Det(input);
+        CPPUNIT_ASSERT_EQUAL(9.0, det);
+    }
 
 };
 
