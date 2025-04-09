@@ -30,6 +30,8 @@ class LinalgTest : public CppUnit::TestFixture {
     CPPUNIT_TEST(test_solve);
     CPPUNIT_TEST(test_solvex);
     CPPUNIT_TEST(test_get_row);
+    CPPUNIT_TEST(test_get_col);
+    CPPUNIT_TEST(test_dot_product);
     CPPUNIT_TEST_SUITE_END();
 
 
@@ -47,6 +49,30 @@ public:
 	Dvector a2_expected = {-3, -1, 2};
 	vector_equal(a2, a2_expected);
     }
+
+    void test_get_col() {
+	Dmatrix input = {{2, 1, -1},
+	                 {-3, -1, 2},
+			 {-2, 1, 2}};
+
+	Dvector a1 = GetCol(input, 0);
+	Dvector a1_expected = {{2},
+	                       {-3},
+			       {-2}};
+	vector_equal(a1, a1_expected);
+    }
+
+    void test_dot_product() {
+	Dmatrix input = {{2, 1, -1},
+	                 {-3, -1, 2},
+			 {-2, 1, 2}};
+
+	Dvector a1 = DotProduct(input, input, 0, 0);
+	Dvector a1_expected = {4};
+	vector_equal(a1, a1_expected);
+
+
+
 
     void test_solvex() {
 	Dmatrix input = {{2, 1, -1},

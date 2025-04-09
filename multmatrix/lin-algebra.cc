@@ -43,8 +43,20 @@ void Display(const Dmatrix &Amat)
 
 Dvector GetRow(const Dmatrix &Amat, int row)
 {
-    
-    
+    //if (row >= Amat.size()) {
+	//printf("out of bounds get outta here mustard");
+    }
+    //return Amat[row]
+}
+
+}
+
+Dvector GetCol(const Dmatrix &Amat, int col)
+{
+}
+
+Dvector DotProduct(const Dmatrix &Amat, const Dmatrix &Amat, int row, int col)
+{
 }
 
 Dvector Solvex(const Dmatrix &Amat, const Dvector &bvect)

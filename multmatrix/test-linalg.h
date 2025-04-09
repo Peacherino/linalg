@@ -12,6 +12,8 @@ class LinalgTest : public CppUnit::TestFixture {
     CPPUNIT_TEST(test3x3_determinant);
     CPPUNIT_TEST(test_solve);
     CPPUNIT_TEST(test_get_row);
+    CPPUNIT_TEST(test_get_col);
+    CPPUNIT_TEST(test_dot_product);
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -24,6 +26,8 @@ public:
     void test3x3_determinant();
     void test_solve();
     void test_get_row();
+    void test_get_col();
+    void test_dot_product();
 };
 
 #endif // LINALG_TEST_H

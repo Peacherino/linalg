@@ -34,6 +34,11 @@ Dmatrix Replace(Dmatrix Rmat, const int col, const Dvector &bvect);
 Dmatrix Minor(const Dmatrix &Amat, const int col);
 // Gets the Minor matrix of Amat by crossing out the first row and 
 // column 'col' then returns that smaller matrix
+//
+
+Dvector GetCol(const Dmatrix &Amat, const int col);
+
+Dvector DotProduct(const Dmatrix &Amat, const Dmatrix &Amat, const int row, const int col);
 
 
 
