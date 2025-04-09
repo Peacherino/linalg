@@ -9,6 +9,7 @@ int main(){
 	Display(A);
 	b=Getb(A.size());
 	x=Solvex(A,b);
+	cout << "the result is: ";
 	Display(x);
 
 	return(0);
