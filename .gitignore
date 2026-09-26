@@ -1,0 +1,3 @@
+*.o
+lin-algebra
+test-runner
