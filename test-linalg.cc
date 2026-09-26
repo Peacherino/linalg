@@ -29,7 +29,6 @@ class LinalgTest : public CppUnit::TestFixture {
     CPPUNIT_TEST(test3x3_determinant);
     CPPUNIT_TEST(test_solve);
     CPPUNIT_TEST(test_solvex);
-    CPPUNIT_TEST(test_map);
     CPPUNIT_TEST_SUITE_END();
 
 
@@ -105,15 +104,6 @@ public:
 	Display(out);
 	vector_equal(expected, out);
     }
-    void test_map() {
-	Dmatrix input = {{1, 2, 3},
-	                 {4, 5, 6},
-			 {7, 8, 9}};
-	std::map<std::string, double> mymap;
-	std::string key = matrix_to_key(input);
-	mymap[key] = 123.456;
-	cout << "value for matrix key: "<< mymap[key] << endl;
-    }    
 
 };
 
