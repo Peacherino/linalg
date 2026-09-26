@@ -1,16 +1,19 @@
-CXX=g++
-OBJ=lin-algebra.o
-TEST_OBJ=test.o test-linalg.o
+CXX := g++
+OBJ := lin-algebra.o
+TEST_OBJ := test.o test-linalg.o
 
+.PHONY: all test clean
 
-main: $(OBJ) main.o
-	$(CXX) -o lin-algebra $(OBJ) main.o
+all: lin-algebra
 
-test: $(OBJ) $(TEST_OBJ)
-	$(CXX) -o test $(OBJ) $(TEST_OBJ) -lcppunit
-	./test
+lin-algebra: $(OBJ) main.o
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-all: main test
+test-runner: $(OBJ) $(TEST_OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^ -lcppunit
+
+test: test-runner
+	./test-runner
 
 clean:
-	rm *.o test lin-algebra
+	rm -f *.o lin-algebra test-runner
