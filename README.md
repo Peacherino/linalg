@@ -1,1 +1,5 @@
-meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow mewo meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow moew meow meow meow meow meow meow meow meow meow meow meow meow get memed
+C++ Program I made for a high school assignment. I used test driven development to test each of my functions.
+
+This project:
+Calculates determinants for nxn matrices
+Solves linear systems
