@@ -1,3 +1,4 @@
 *.o
 lin-algebra
 test-runner
+*.swp
