@@ -3,7 +3,7 @@
 C++ Program I made for a high school assignment. I used test driven development (TDD) to test each of my functions.
 
 ## Screenshot of Project
-<img width="464" height="384" alt="image" src="https://github.com/user-attachments/assets/0275c2e4-9761-4f07-a9fd-dd9d8f6488a0" />
+<img width="471" height="367" alt="linalg-ss" src="https://github.com/user-attachments/assets/526280f8-53cc-4a11-8dfa-15953c7d25bd" />
 
 ## About Project:
 #### This project completes two useful calculations:
