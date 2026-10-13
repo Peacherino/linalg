@@ -3,6 +3,7 @@
 C++ Program I made for a high school assignment. I used test driven development (TDD) to test each of my functions.
 
 ## Screenshot of Project
+<img width="464" height="384" alt="image" src="https://github.com/user-attachments/assets/0275c2e4-9761-4f07-a9fd-dd9d8f6488a0" />
 
 ## About Project:
 #### This project completes two useful calculations:
@@ -38,7 +39,7 @@ This project gave me experience with unit testing, organizing components into se
 - providing clearer prompts for the user to enter matrix dimensions and values
 - allow users to calculate determinants independently without solving an entire system as some systems are quite large
 - supporting 1x1 matrices
-- improving efficiency when solving floating-point calculations
+- improve speed for larger matrixes by using other calculation methods after a certain size
 
 ## How to Run It
 #### Requirements:
@@ -46,26 +47,29 @@ This project gave me experience with unit testing, organizing components into se
 - Make
 - CppUnit (for running tests - not necessary if you only want to use the calculator)
 
-1. Launch Calculator Program
+1. Compile the Program (make sure you are in the linalg folder and have all files)
+   Run "make" to efficiently compile everything
+  
+2. Launch Calculator Program
    ./lin-algebra
 
-2. Enter a System fo Equations
-   example:
+3. Enter Your Matrix and System of Equations
+   For example if you wanted to calculate a the determinants of a matrix with equations
    5x + 2y = 11
    x - y = 1.5
 
-4. Enter Your Matrix
-   example:
+   You would type:
    2 2 - meaning 2 rows, 2 columns
    5 2 - first row of coefficents
-   1 -1 - secodn row of coefficients
+   1 -1 - second row of coefficients
    11 1.5 - constants vector
 
-6. Receive an Output:
+4. Receive an Output:
    in this case the result is:
    2.00 0.50 - meaning x = 2.00 and y = 0.50
+   (NOTE: results will take longer the larger the matrix provided)
 
-8. Run the Tests (optional)
+6. Run the Tests (optional)
    If you have CppUnit installed you can compile and run the CppUnit tests in the test h files with:
    make test
 
