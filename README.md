@@ -55,20 +55,16 @@ This project gave me experience with unit testing, organizing components into se
 
 3. Enter Your Matrix and System of Equations
 
-   For example if you wanted to calculate a the determinants of a matrix with equations
+   For example if you wanted to calculate the determinants of a matrix with equations:
    
    5x + 2y = 11
-   
    x - y = 1.5
 
    You would type:
    
    2 2 - meaning 2 rows, 2 columns
-   
    5 2 - first row of coefficents
-   
    1 -1 - second row of coefficients
-   
    11 1.5 - constants vector
 
 5. Receive an Output:
