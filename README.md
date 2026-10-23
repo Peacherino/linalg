@@ -54,6 +54,7 @@ This project gave me experience with unit testing, organizing components into se
    ./lin-algebra
 
 3. Enter Your Matrix and System of Equations
+
    For example if you wanted to calculate a the determinants of a matrix with equations
    5x + 2y = 11
    x - y = 1.5
@@ -64,7 +65,7 @@ This project gave me experience with unit testing, organizing components into se
    1 -1 - second row of coefficients
    11 1.5 - constants vector
 
-4. Receive an Output:
+5. Receive an Output:
    in this case the result is:
    2.00 0.50 - meaning x = 2.00 and y = 0.50
    (NOTE: results will take longer the larger the matrix provided)
